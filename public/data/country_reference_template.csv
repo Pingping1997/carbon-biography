@@ -1,0 +1,5 @@
+iso3,country,year,metric,value,unit,source_id,notes
+CHN,China,2024,territorial_co2,8.7,t CO2/person/year,owid-gcb-territorial-co2,demo row
+USA,United States,2024,territorial_co2,14.0,t CO2/person/year,owid-gcb-territorial-co2,demo row
+AUT,Austria,2024,territorial_co2,,t CO2/person/year,owid-gcb-territorial-co2,load from versioned source
+ITA,Italy,2024,territorial_co2,,t CO2/person/year,owid-gcb-territorial-co2,load from versioned source

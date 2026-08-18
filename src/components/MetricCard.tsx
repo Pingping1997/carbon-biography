@@ -1,0 +1,4 @@
+interface Props { label: string; value: string; note?: string }
+export function MetricCard({ label, value, note }: Props) {
+  return <div className="metric-card"><div className="metric-label">{label}</div><div className="metric-value">{value}</div>{note && <div className="metric-note">{note}</div>}</div>
+}
