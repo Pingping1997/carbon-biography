@@ -63,17 +63,214 @@ export const pingpingProfile: PersonProfile = {
 }
 
 export const davidePlaceholder: PersonProfile = {
-  id: 'davide-placeholder',
+  id: 'davide',
   name: 'Davide',
-  birthYear: 1997,
+  birthYear: 1993,
   flag: '🇮🇹',
-  tagline: 'Italian comparison profile — intentionally incomplete',
-  status: 'placeholder',
+  tagline: 'Italian life-course comparison profile',
+  status: 'draft',
   stages: [
-    { id:'dv-child', startYear:1997, endYear:2008, label:'Childhood', place:'Italy — add location', countryCode:'ITA', coordinates:{lat:42.8,lon:12.8}, lifeStage:'Childhood', narrative:'Placeholder. Add real childhood housing, heating, mobility and family context.', inputs:{ householdResources:'unknown' } },
-    { id:'dv-teen', startYear:2008, endYear:2015, label:'Teenager', place:'Italy — add location', countryCode:'ITA', coordinates:{lat:42.8,lon:12.8}, lifeStage:'Teenager', narrative:'Placeholder. Add school, household and mobility context.', inputs:{ householdResources:'unknown' } },
-    { id:'dv-young', startYear:2015, endYear:2022, label:'Young adult', place:'Italy / Europe — add location', countryCode:'ITA', coordinates:{lat:42.8,lon:12.8}, lifeStage:'University / early adult', narrative:'Placeholder. Fill this together instead of assuming a typical Italian lifestyle.', inputs:{ householdResources:'unknown' } },
-    { id:'dv-now', startYear:2022, endYear:2026, label:'Adult', place:'Austria / Italy — add location', countryCode:'AUT', coordinates:{lat:48.21,lon:16.37}, lifeStage:'Adult', narrative:'A potentially shared present can follow a very different childhood and cumulative history.', inputs:{ householdResources:'unknown' } }
+    {
+      id: 'dv-childhood-imperia',
+      startYear: 1993,
+      endYear: 2012,
+      label: 'Childhood and teenager',
+      place: 'Imperia, Liguria, Italy',
+      countryCode: 'ITA',
+      coordinates: { lat: 43.89, lon: 8.03 },
+      lifeStage: 'Childhood / teenager',
+      narrative:
+        'Grew up in the family hometown near Imperia in an independent villa. Daily life was strongly car-oriented because the family home was outside the city center. Both parents owned cars. Weekend activities included sports-club training, visiting nearby towns and friends, usually by car. Family holidays occurred at least once per year, using an RV, train or flights.',
+      inputs: {
+        householdResources: 'comfortable',
+        housingType: 'independent_villa',
+        householdSize: 'family_household',
+
+        cookingFuel: 'gas',
+        heating: 'unknown',
+        airConditioning: true,
+
+        appliances: [
+          'oven',
+          'washing_machine'
+        ],
+
+        householdCars: 2,
+        carDependence: 'high',
+        dailyMobility: [
+          'family_car'
+        ],
+
+        schoolTransport: 'car_or_other',
+        weekendMobility: [
+          'car',
+          'sports_club',
+          'nearby_city_visits',
+          'friends_visits'
+        ],
+
+        holidayFrequency: 'at_least_once_per_year',
+        holidayModes: [
+          'rv',
+          'train',
+          'flight'
+        ],
+
+        longDistanceTravel: 'regular_family_holiday'
+      }
+    },
+
+    {
+      id: 'dv-university-genova',
+      startYear: 2012,
+      endYear: 2015,
+      label: 'University',
+      place: 'Genova, Liguria, Italy',
+      countryCode: 'ITA',
+      coordinates: { lat: 44.41, lon: 8.93 },
+      lifeStage: 'University student',
+      narrative:
+        'Studied in Genova. Travel between Genova and the family home in Imperia was frequent, typically every weekend, by car or train. Holiday trips with friends within Italy or elsewhere in Europe occurred around one to two times per year.',
+      inputs: {
+        householdResources: 'student_supported',
+
+        housingType: 'unknown',
+        cookingPattern: 'unknown',
+
+        intercityMobility: [
+          'car',
+          'train'
+        ],
+
+        familyVisitFrequency: 'weekly',
+        familyVisitRoute: 'Genova–Imperia',
+
+        localMobility: [
+          'public_transport',
+          'walking',
+          'car'
+        ],
+
+        holidayFrequency: '1_to_2_times_per_year',
+        holidayGeography: [
+          'italy',
+          'europe'
+        ],
+
+        longDistanceTravel: 'moderate'
+      }
+    },
+
+    {
+      id: 'dv-work-milan',
+      startYear: 2015,
+      endYear: 2019,
+      label: 'Early career in Milan',
+      place: 'Milan, Lombardy, Italy',
+      countryCode: 'ITA',
+      coordinates: { lat: 45.46, lon: 9.19 },
+      lifeStage: 'Young professional',
+      narrative:
+        'Worked in Milan and lived alone. Cooking was simple. Returned to Imperia approximately once per month, mainly by car. Within Milan, public transport was used for daily mobility. Holiday trips with friends in Italy or elsewhere in Europe occurred around one to two times per year. This period also included a short stay in Ireland.',
+      inputs: {
+        householdResources: 'young_professional',
+
+        housingType: 'single_person_apartment',
+        livingAlone: true,
+        cookingPattern: 'simple_home_cooking',
+
+        localMobility: [
+          'public_transport',
+          'walking'
+        ],
+
+        familyVisitFrequency: 'monthly',
+        familyVisitRoute: 'Milan–Imperia',
+        familyVisitMode: 'car',
+
+        holidayFrequency: '1_to_2_times_per_year',
+        holidayGeography: [
+          'italy',
+          'europe'
+        ],
+
+        internationalStay: [
+          'Ireland'
+        ],
+
+        longDistanceTravel: 'moderate'
+      }
+    },
+
+    {
+      id: 'dv-work-vienna',
+      startYear: 2019,
+      endYear: 2022,
+      label: 'Work in Vienna',
+      place: 'Vienna, Austria',
+      countryCode: 'AUT',
+      coordinates: { lat: 48.21, lon: 16.37 },
+      lifeStage: 'Professional',
+      narrative:
+        'Moved to Vienna for work. Maintained regular travel between Vienna and Italy, alongside trips within Austria, Italy and other European cities. Leisure travel occurred roughly two to three times per year.',
+      inputs: {
+        householdResources: 'professional',
+
+        housingType: 'unknown',
+        cookingPattern: 'unknown',
+
+        localMobility: [
+          'public_transport',
+          'walking'
+        ],
+
+        internationalMobility: [
+          'Austria–Italy'
+        ],
+
+        holidayFrequency: '2_to_3_times_per_year',
+        holidayGeography: [
+          'austria',
+          'italy',
+          'europe'
+        ],
+
+        longDistanceTravel: 'moderate_to_high'
+      }
+    },
+
+    {
+      id: 'dv-shared-vienna',
+      startYear: 2023,
+      endYear: 2026,
+      label: 'Shared life in Vienna',
+      place: 'Vienna, Austria',
+      countryCode: 'AUT',
+      coordinates: { lat: 48.21, lon: 16.37 },
+      lifeStage: 'Adult / shared household',
+      narrative:
+        'From 2023 onward, Davide and Pingping increasingly share the same household and present-day infrastructure in Vienna. Their current lifestyles partly converge, while their childhood environments, mobility systems, household resources and cumulative carbon histories remain very different.',
+      inputs: {
+        householdResources: 'shared_professional_household',
+
+        housingType: 'shared_household',
+        livingWithPartner: true,
+
+        localMobility: [
+          'public_transport',
+          'walking'
+        ],
+
+        internationalMobility: [
+          'italy',
+          'europe'
+        ],
+
+        sharedLifeStage: true,
+
+        longDistanceTravel: 'moderate_to_high'
+      }
+    }
   ]
 }
 
